@@ -152,7 +152,7 @@ $(DICTIONARY): $(HEADERS)
 	@echo "Generating $(DICTIONARYNAME)_LinkDef ..."
 	@$(BN)/generatelinkdef -o $(LINKDEF) -i $(HEADERS)
 	@echo "Generating dictionary ..."
-	@rootcling -f $@ -I$(IN) -D___CLING___ -rmf $(ROOTMAP) -s lib$(LIBRARY) -c $^ $(LINKDEF)
+	@rootcling -f $@ -I$(IN) -I/Users/imartin5/software/Healpix_3.82/include/healpix_cxx -I/Users/imartin5/software/Healpix_3.82/include -I/Users/imartin5/software/cfitsio-4.1.0/ -D___CLING___ -rmf $(ROOTMAP) -s lib$(LIBRARY) -c $^ $(LINKDEF)
 	@mv $(ROOTPCM) $(LB)
 	@echo "Dictionary done ..."
 

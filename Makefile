@@ -47,6 +47,9 @@ endif
 CXXFLAGS    += -I$(IN)
 LDFLAGS     += -L$(LB)
 
+CXXFLAGS    += -I/Users/imartin5/software/Healpix_3.82/include/healpix_cxx -I/Users/imartin5/software/Healpix_3.82/include -I/Users/imartin5/software/cfitsio-4.1.0/
+LDFLAGS     += -L/Users/imartin5/software/Healpix_3.82/lib -L/opt/local/lib -lhealpix_cxx -lz -L/Users/imartin5/software/cfitsio-4.1.0
+
 #MAKEFLAGS += --no-builtin-rules
 
 #------------------------------------------------------------------------------
